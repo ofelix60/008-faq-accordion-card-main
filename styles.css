@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 12px;
+	color: hsl(240, 6%, 50%);
+	background-image: linear-gradient(
+		to bottom,
+		#a58cba,
+		#9d81c4,
+		#9276cf,
+		#806dda,
+		#6565e7
+	);
+}
+
+.outer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 375px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.img-container {
+	margin-top: -110px;
+}
+
+.img-container > .img-shadow {
+	margin-top: -75px;
+}
+
+.accordion-body {
+	padding: 35px 30px;
+}
+
+.accordion-body > h1 {
+	text-align: center;
+	margin: 0px auto 32px;
+	font-weight: 700;
+	font-size: 32px;
+	letter-spacing: 3px;
+	color: hsl(237, 12%, 33%);
+}
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+}
+
+.accordion-container {
+	padding: 10px 15px 10px 5px;
+	border-bottom: 1.5px solid hsl(240, 5%, 91%);
+	min-width: 285px;
+}
+
+.accordion-container.active .content {
+	display: block;
+}
+
+.accordion-container.active .label {
+	color: hsl(237, 12%, 33%);
+}
+
+.accordion-container.active .arrow {
+	transform: rotate(3.142rad);
+}
+
+.label {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 12px;
+	font-weight: 700;
+	cursor: pointer;
+	letter-spacing: 1px;
+	min-width: 285px;
+	min-height: 15px;
+}
+
+.label :hover {
+	color: hsl(14, 88%, 65%);
+}
+
+.label-text {
+	color: hsl(240, 6%, 50%);
+}
+
+.label > img {
+	height: 7px;
+	width: 9px;
+	cursor: pointer;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.content {
+	max-width: 88%;
+	line-height: 18px;
+	margin-bottom: 10px;
+	display: none;
+}
+
+.mobile {
+	display: block;
+}
+.desktop {
+	display: none;
+}
+
+@media (min-width: 1025px) {
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: block;
+	}
+
+	.outer-container {
+		display: flex;
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+	.container {
+		background-color: #fff;
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		max-width: 1200px;
+		min-height: 700px;
+		max-height: 700px;
+		border-radius: 20px;
+	}
+
+	.relative-wrap {
+		position: relative;
+		width: 50%;
+		overflow: hidden;
+	}
+
+	.img-container {
+		width: 100%;
+		/* height: 100%; */
+		overflow: hidden;
+	}
+
+	.woman-desktop {
+		position: relative;
+		width: 650px;
+		left: -21%;
+		top: 550px;
+		z-index: 777;
+	}
+
+	.bg-pattern-desktop {
+		position: relative;
+		width: 1100px;
+		left: -96%;
+		top: -300px;
+	}
+
+	.box-desktop {
+		position: absolute;
+		z-index: 999;
+
+		left: -15.5%;
+		top: 45%;
+	}
+
+	.accordion {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	.accordion-body {
+		width: 50%;
+		padding: 100px 100px 100px 70px;
+	}
+
+	/* .accordion-body > h1 {
+		color: hsl(237, 12%, 33%);
+		letter-spacing: 2px;
+		font-size: 30px;
+	} */
+
+	.accordion-container {
+		padding: 15px 0px 12px;
+		border-bottom: 1px solid hsl(240, 5%, 91%);
+	}
+
+	.accordion-container.active .content {
+		display: block;
+	}
+
+	.accordion-container.active .label {
+		color: hsl(237, 12%, 33%);
+		font-weight: 700;
+	}
+
+	.accordion-container.active .arrow {
+		transform: rotate(3.142rad);
+	}
+
+	.label {
+		display: flex;
+		justify-content: space-between;
+		font-size: 13px;
+		font-weight: 400;
+		margin: 10px 0px 10px;
+		letter-spacing: 0.3px;
+	}
+
+	.content {
+		margin-right: 25px;
+		letter-spacing: 0.3px;
+		display: none;
+	}
+}
